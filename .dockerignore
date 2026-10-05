@@ -1,0 +1,7 @@
+.git
+.venv
+.runtime
+results
+docs
+tests
+__pycache__

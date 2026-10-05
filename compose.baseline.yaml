@@ -1,0 +1,25 @@
+name: ftr-midterm-baseline
+services:
+  database:
+    restart: 'no'
+    environment: {MODE: baseline}
+    volumes: ['./.runtime/docker-baseline:/app/data']
+  student:
+    restart: 'no'
+    environment: {MODE: baseline}
+  payment1:
+    restart: 'no'
+    environment: {MODE: baseline}
+  payment2:
+    profiles: [unused]
+    restart: 'no'
+  academic:
+    restart: 'no'
+    environment: {MODE: baseline}
+  gateway:
+    restart: 'no'
+    environment:
+      MODE: baseline
+      PAYMENT_URLS: http://payment1:8000
+    depends_on:
+      payment2: {condition: service_started, required: false}

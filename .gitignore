@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.runtime/
+*.pyc
+*.sqlite*
+.env
+docs/qa/
+docs/tooling/
+results/smoke/
+results/evaluation/
+results/measured/

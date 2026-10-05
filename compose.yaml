@@ -1,0 +1,73 @@
+name: ftr-midterm
+x-service: &service
+  build: .
+  restart: unless-stopped
+  healthcheck:
+    test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=1)"]
+    interval: 5s
+    timeout: 2s
+    retries: 3
+    start_period: 10s
+x-env: &env
+  MODE: ft
+  DEMO_TOKEN: ${DEMO_TOKEN:-}
+  DB_URL: http://database:8000
+services:
+  database:
+    <<: *service
+    command: [python, -m, uvicorn, 'app.database:app', --host, 0.0.0.0, --port, '8000', --no-access-log]
+    environment:
+      <<: *env
+      INSTANCE: database
+      DATA_DIR: /app/data
+    volumes: ['./.runtime/docker-ft:/app/data']
+  student:
+    <<: *service
+    command: [python, -m, uvicorn, 'app.service:app', --host, 0.0.0.0, --port, '8000', --no-access-log]
+    environment:
+      <<: *env
+      INSTANCE: student
+      SERVICE: student
+    depends_on:
+      database: {condition: service_healthy}
+  payment1:
+    <<: *service
+    command: [python, -m, uvicorn, 'app.service:app', --host, 0.0.0.0, --port, '8000', --no-access-log]
+    environment:
+      <<: *env
+      INSTANCE: payment1
+      SERVICE: payment
+    depends_on:
+      database: {condition: service_healthy}
+  payment2:
+    <<: *service
+    command: [python, -m, uvicorn, 'app.service:app', --host, 0.0.0.0, --port, '8000', --no-access-log]
+    environment:
+      <<: *env
+      INSTANCE: payment2
+      SERVICE: payment
+    depends_on:
+      database: {condition: service_healthy}
+  academic:
+    <<: *service
+    command: [python, -m, uvicorn, 'app.service:app', --host, 0.0.0.0, --port, '8000', --no-access-log]
+    environment:
+      <<: *env
+      INSTANCE: academic
+      SERVICE: academic
+    depends_on:
+      database: {condition: service_healthy}
+  gateway:
+    <<: *service
+    environment:
+      <<: *env
+      INSTANCE: gateway
+      STUDENT_URL: http://student:8000
+      PAYMENT_URLS: http://payment1:8000,http://payment2:8000
+      ACADEMIC_URL: http://academic:8000
+    ports: ['127.0.0.1:8100:8000']
+    depends_on:
+      student: {condition: service_healthy}
+      payment1: {condition: service_healthy}
+      payment2: {condition: service_healthy}
+      academic: {condition: service_healthy}
