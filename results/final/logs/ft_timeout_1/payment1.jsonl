@@ -1,0 +1,2 @@
+{"timestamp": "2026-10-05T09:42:41.567474+00:00", "wall_time": 1791193361.5674834, "service": "payment1", "mode": "ft", "action": "request", "request_id": "8d27b5db-e1e9-4792-a0a6-1afd3cf34559", "path": "/health", "status": 200, "latency_ms": 2.145}
+{"timestamp": "2026-10-05T09:42:42.380125+00:00", "wall_time": 1791193362.3801308, "service": "payment1", "mode": "ft", "action": "request", "request_id": "70e9ec30-f2f7-4043-8cb4-55af59da07bb", "path": "/payments", "status": 200, "latency_ms": 11.53}

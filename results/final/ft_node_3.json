@@ -1,0 +1,337 @@
+{
+  "summary": {
+    "mode": "ft",
+    "scenario": "node",
+    "trial": 3,
+    "requests": 18,
+    "successful_requests": 17,
+    "failed_requests": 1,
+    "degraded_responses": 1,
+    "recovered_requests": 2,
+    "retried_requests": 3,
+    "retry_recovery_rate": 0.6666666666666666,
+    "request_availability": 0.9444444444444444,
+    "observation_s": 5.526622799999586,
+    "uptime_s": 5.526622799999586,
+    "downtime_s": 0,
+    "outage_episodes": 0,
+    "completed_recoveries": 0,
+    "mttf_s": null,
+    "mttr_s": null,
+    "mtbf_s": null,
+    "time_availability": 1.0,
+    "failure_rate_per_s": 0.0,
+    "p95_latency_ms": 802.5738000001184,
+    "detection_ms": 637.277364730835,
+    "service_recovery_ms": 247.59750000021086,
+    "component_restore_ms": 3626.516000000265,
+    "consistent": true,
+    "duplicate_keys": 0,
+    "payment_count": 1,
+    "workers": "payment1,payment2,student"
+  },
+  "events": [
+    {
+      "action": "fault_injected",
+      "time_s": 0.3997169999997823,
+      "wall_time": 1791193607.6844347,
+      "scenario": "node"
+    },
+    {
+      "action": "processes_killed",
+      "time_s": 0.6383857999999236,
+      "wall_time": 1791193607.923104,
+      "victims": [
+        "payment1",
+        "academic"
+      ]
+    },
+    {
+      "action": "component_restored",
+      "time_s": 4.0262330000000475,
+      "wall_time": 1791193611.310951
+    }
+  ],
+  "requests": [
+    {
+      "request_id": "eac4acb8-7216-439a-8e41-4099e2800c5c",
+      "start_s": 0.01976310000009107,
+      "end_s": 0.0315136999997776,
+      "status": 200,
+      "full_success": true,
+      "degraded": false,
+      "attempts": 1,
+      "worker": "payment2",
+      "probe": true,
+      "latency_ms": 11.751199999707751,
+      "path": "payments"
+    },
+    {
+      "request_id": "f9be140a-40a4-4909-9728-b3f2b5731d3d",
+      "start_s": 0.11306909999984782,
+      "end_s": 0.12204350000001796,
+      "status": 200,
+      "full_success": true,
+      "degraded": false,
+      "attempts": 1,
+      "worker": "payment1",
+      "probe": true,
+      "latency_ms": 8.975000000191358,
+      "path": "payments"
+    },
+    {
+      "request_id": "02b952a0-7e3e-427f-88ee-0fb6b88d0198",
+      "start_s": 0.2032214999999269,
+      "end_s": 0.2118769999997312,
+      "status": 200,
+      "full_success": true,
+      "degraded": false,
+      "attempts": 1,
+      "worker": "payment2",
+      "probe": true,
+      "latency_ms": 8.65620000013223,
+      "path": "payments"
+    },
+    {
+      "request_id": "57e7aa76-fca1-432b-af71-9c8949c9f49b",
+      "start_s": 0.2937987999998768,
+      "end_s": 0.30325059999995574,
+      "status": 200,
+      "full_success": true,
+      "degraded": false,
+      "attempts": 1,
+      "worker": "payment1",
+      "probe": true,
+      "latency_ms": 9.45240000010017,
+      "path": "payments"
+    },
+    {
+      "request_id": "956ea159-b87e-4816-897b-52171b71bacc",
+      "start_s": 0.6384167000001071,
+      "end_s": 0.6473144999999931,
+      "status": 200,
+      "full_success": true,
+      "degraded": false,
+      "attempts": 1,
+      "worker": "payment2",
+      "probe": true,
+      "latency_ms": 8.898499999759224,
+      "path": "payments"
+    },
+    {
+      "request_id": "0838cd48-2e43-4136-aa9a-6d3001ea9ee5",
+      "start_s": 0.7310835999996925,
+      "end_s": 1.1062062000000878,
+      "status": 200,
+      "full_success": true,
+      "degraded": false,
+      "attempts": 2,
+      "worker": "payment2",
+      "probe": true,
+      "latency_ms": 375.1233000002685,
+      "path": "payments"
+    },
+    {
+      "request_id": "8b663b14-8e65-43dc-b4f0-c218e107bcff",
+      "start_s": 1.1905100999997558,
+      "end_s": 1.2009054000000106,
+      "status": 200,
+      "full_success": true,
+      "degraded": false,
+      "attempts": 1,
+      "worker": "payment2",
+      "probe": true,
+      "latency_ms": 10.396099999979924,
+      "path": "payments"
+    },
+    {
+      "request_id": "3a65332a-7f3a-4ca4-a3dd-60669cbe18c2",
+      "start_s": 1.2945286999997734,
+      "end_s": 1.6637562999999318,
+      "status": 200,
+      "full_success": true,
+      "degraded": false,
+      "attempts": 2,
+      "worker": "payment2",
+      "probe": true,
+      "latency_ms": 369.22820000017964,
+      "path": "payments"
+    },
+    {
+      "request_id": "8ad911c8-0eb8-4ce0-87ad-81ebcc899a81",
+      "start_s": 1.7551465999999891,
+      "end_s": 1.7647945999997319,
+      "status": 200,
+      "full_success": true,
+      "degraded": false,
+      "attempts": 1,
+      "worker": "payment2",
+      "probe": true,
+      "latency_ms": 9.64849999991202,
+      "path": "payments"
+    },
+    {
+      "request_id": "131e96bf-b20e-40dc-b5d2-2936149f8f9d",
+      "start_s": 1.8487669999999525,
+      "end_s": 1.8571259000000282,
+      "status": 200,
+      "full_success": true,
+      "degraded": false,
+      "attempts": 1,
+      "worker": "payment2",
+      "probe": true,
+      "latency_ms": 8.359699999800796,
+      "path": "payments"
+    },
+    {
+      "request_id": "9cb33a92-949b-47c7-b80a-06243e2efd80",
+      "start_s": 1.938855699999749,
+      "end_s": 1.948604599999726,
+      "status": 200,
+      "full_success": true,
+      "degraded": false,
+      "attempts": 1,
+      "worker": "payment2",
+      "probe": true,
+      "latency_ms": 9.749400000146125,
+      "path": "payments"
+    },
+    {
+      "request_id": "1f23eeb5-dcf7-43ba-9bf6-2dd0d54d3171",
+      "start_s": 2.0294691999997667,
+      "end_s": 2.041963399999986,
+      "status": 200,
+      "full_success": true,
+      "degraded": false,
+      "attempts": 1,
+      "worker": "student",
+      "probe": false,
+      "latency_ms": 12.494800000240502,
+      "path": "students"
+    },
+    {
+      "request_id": "deccf2a1-2ad7-4a0a-a33c-20e0ffc88171",
+      "start_s": 2.0419803999998294,
+      "end_s": 2.8445535999999265,
+      "status": 200,
+      "full_success": false,
+      "degraded": true,
+      "attempts": 2,
+      "worker": "",
+      "probe": false,
+      "latency_ms": 802.5738000001184,
+      "path": "transcript/S001"
+    },
+    {
+      "request_id": "d2212e18-a74b-42ed-ba35-6784f5dea871",
+      "start_s": 5.076753299999837,
+      "end_s": 5.089328999999907,
+      "status": 200,
+      "full_success": true,
+      "degraded": false,
+      "attempts": 1,
+      "worker": "payment1",
+      "probe": true,
+      "latency_ms": 12.576300000091578,
+      "path": "payments"
+    },
+    {
+      "request_id": "bba8ad2e-c5d9-4005-9ff7-fa5a8020cb90",
+      "start_s": 5.174009800000022,
+      "end_s": 5.18259369999987,
+      "status": 200,
+      "full_success": true,
+      "degraded": false,
+      "attempts": 1,
+      "worker": "payment2",
+      "probe": true,
+      "latency_ms": 8.584599999721831,
+      "path": "payments"
+    },
+    {
+      "request_id": "3a10dd29-447b-4fe7-8f30-c5885fcd8dee",
+      "start_s": 5.264439799999764,
+      "end_s": 5.273746800000026,
+      "status": 200,
+      "full_success": true,
+      "degraded": false,
+      "attempts": 1,
+      "worker": "payment1",
+      "probe": true,
+      "latency_ms": 9.307499999977153,
+      "path": "payments"
+    },
+    {
+      "request_id": "c91dbe77-e5a6-4d86-aa58-0a4ac586ba85",
+      "start_s": 5.3544936999996935,
+      "end_s": 5.362822999999935,
+      "status": 200,
+      "full_success": true,
+      "degraded": false,
+      "attempts": 1,
+      "worker": "payment2",
+      "probe": true,
+      "latency_ms": 8.329900000262569,
+      "path": "payments"
+    },
+    {
+      "request_id": "1fd0e521-8803-45da-8e88-bb8266d3f0a0",
+      "start_s": 5.446793900000102,
+      "end_s": 5.455996199999845,
+      "status": 200,
+      "full_success": true,
+      "degraded": false,
+      "attempts": 1,
+      "worker": "payment1",
+      "probe": true,
+      "latency_ms": 9.202899999763758,
+      "path": "payments"
+    }
+  ],
+  "state_before": {
+    "consistent": true,
+    "balances": [
+      {
+        "id": "S001",
+        "initial_due": 100000,
+        "due": 99900,
+        "paid": 100,
+        "discrepancy": 0
+      },
+      {
+        "id": "S002",
+        "initial_due": 100000,
+        "due": 100000,
+        "paid": 0,
+        "discrepancy": 0
+      }
+    ],
+    "duplicate_keys": 0,
+    "payment_count": 1
+  },
+  "state_after": {
+    "consistent": true,
+    "balances": [
+      {
+        "id": "S001",
+        "initial_due": 100000,
+        "due": 99900,
+        "paid": 100,
+        "discrepancy": 0
+      },
+      {
+        "id": "S002",
+        "initial_due": 100000,
+        "due": 100000,
+        "paid": 0,
+        "discrepancy": 0
+      }
+    ],
+    "duplicate_keys": 0,
+    "payment_count": 1
+  },
+  "extra": {
+    "student_status": 200,
+    "transcript_degraded": true
+  }
+}

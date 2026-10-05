@@ -1,0 +1,8 @@
+{
+  "started_utc": "2026-10-05T09:41:17.045013+00:00",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "python": "3.14.6",
+  "backend": "local subprocesses",
+  "trials": 3,
+  "note": "Injected faults, not a prediction of production MTTF. Node failure is a process-group simulation."
+}

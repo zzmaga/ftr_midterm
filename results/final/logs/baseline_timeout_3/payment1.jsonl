@@ -1,0 +1,3 @@
+{"timestamp": "2026-10-05T09:45:43.208256+00:00", "wall_time": 1791193543.208264, "service": "payment1", "mode": "baseline", "action": "request", "request_id": "c7dfacf6-c325-4a06-8093-e53433d19a9f", "path": "/health", "status": 200, "latency_ms": 1.785}
+{"timestamp": "2026-10-05T09:45:43.657301+00:00", "wall_time": 1791193543.6573074, "service": "payment1", "mode": "baseline", "action": "request", "request_id": "9e903bfc-3327-4ac3-beac-651a01580269", "path": "/payments", "status": 200, "latency_ms": 20.751}
+{"timestamp": "2026-10-05T09:45:49.561779+00:00", "wall_time": 1791193549.5617843, "service": "payment1", "mode": "baseline", "action": "request", "request_id": "5b6af2e1-5d4f-438a-b72c-370956a67164", "path": "/payments", "status": 200, "latency_ms": 4.53}

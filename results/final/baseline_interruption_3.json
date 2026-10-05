@@ -1,0 +1,243 @@
+{
+  "summary": {
+    "mode": "baseline",
+    "scenario": "interruption",
+    "trial": 3,
+    "requests": 10,
+    "successful_requests": 9,
+    "failed_requests": 1,
+    "degraded_responses": 0,
+    "recovered_requests": 0,
+    "retried_requests": 0,
+    "retry_recovery_rate": null,
+    "request_availability": 0.9,
+    "observation_s": 0.7964968999999655,
+    "uptime_s": 0.7708710000001702,
+    "downtime_s": 0.025625899999795365,
+    "outage_episodes": 1,
+    "completed_recoveries": 1,
+    "mttf_s": 0.7708710000001702,
+    "mttr_s": 0.025625899999795365,
+    "mtbf_s": 0.7964968999999655,
+    "time_availability": 0.9678267423265596,
+    "failure_rate_per_s": 1.2972339081373916,
+    "p95_latency_ms": 22.79980000002979,
+    "detection_ms": 15.209197998046875,
+    "service_recovery_ms": 45.42670000000726,
+    "component_restore_ms": 45.430600000145205,
+    "consistent": false,
+    "duplicate_keys": 0,
+    "payment_count": 2,
+    "workers": "payment1"
+  },
+  "events": [
+    {
+      "action": "fault_injected",
+      "time_s": 0.4122096999999485,
+      "wall_time": 1791193568.651575,
+      "scenario": "interruption"
+    },
+    {
+      "action": "component_restored",
+      "time_s": 0.4576403000000937,
+      "wall_time": 1791193568.6970055
+    }
+  ],
+  "requests": [
+    {
+      "request_id": "d5622ab0-761d-48a1-b158-c1a430fd3387",
+      "start_s": 0.030732400000033522,
+      "end_s": 0.040311300000212213,
+      "status": 200,
+      "full_success": true,
+      "degraded": false,
+      "attempts": 1,
+      "worker": "payment1",
+      "probe": true,
+      "latency_ms": 9.579300000041258,
+      "path": "payments"
+    },
+    {
+      "request_id": "52a7d202-5b17-4a54-994a-540a87da6b6b",
+      "start_s": 0.1304893000001357,
+      "end_s": 0.13901410000016767,
+      "status": 200,
+      "full_success": true,
+      "degraded": false,
+      "attempts": 1,
+      "worker": "payment1",
+      "probe": true,
+      "latency_ms": 8.52549999990515,
+      "path": "payments"
+    },
+    {
+      "request_id": "da31d4a4-fad0-46cb-866f-6c5dd4f91b21",
+      "start_s": 0.22556759999997666,
+      "end_s": 0.23401190000004135,
+      "status": 200,
+      "full_success": true,
+      "degraded": false,
+      "attempts": 1,
+      "worker": "payment1",
+      "probe": true,
+      "latency_ms": 8.444900000085909,
+      "path": "payments"
+    },
+    {
+      "request_id": "861395e6-070e-42f1-89cd-1dc30a87e624",
+      "start_s": 0.3165352000000894,
+      "end_s": 0.32453369999984716,
+      "status": 200,
+      "full_success": true,
+      "degraded": false,
+      "attempts": 1,
+      "worker": "payment1",
+      "probe": true,
+      "latency_ms": 7.999099999778991,
+      "path": "payments"
+    },
+    {
+      "request_id": "4502a7f2-43d2-4154-a82a-b249a39b921b",
+      "start_s": 0.4152158000001691,
+      "end_s": 0.4320105000001604,
+      "status": 503,
+      "full_success": false,
+      "degraded": false,
+      "attempts": 1,
+      "worker": "",
+      "probe": true,
+      "latency_ms": 16.795499999716412,
+      "path": "payments"
+    },
+    {
+      "request_id": "a22c7f8a-76dd-458e-8a17-d12fb6b23e9c",
+      "start_s": 0.43483729999979914,
+      "end_s": 0.45763639999995576,
+      "status": 200,
+      "full_success": true,
+      "degraded": false,
+      "attempts": 1,
+      "worker": "payment1",
+      "probe": true,
+      "latency_ms": 22.79980000002979,
+      "path": "payments"
+    },
+    {
+      "request_id": "115c09b1-a8ec-4041-b424-db40e63e1a30",
+      "start_s": 0.4576560000000427,
+      "end_s": 0.46691640000017287,
+      "status": 200,
+      "full_success": true,
+      "degraded": false,
+      "attempts": 1,
+      "worker": "payment1",
+      "probe": true,
+      "latency_ms": 9.261199999855307,
+      "path": "payments"
+    },
+    {
+      "request_id": "302c3451-cfd8-4847-ad1d-ec92db4dc502",
+      "start_s": 0.5526171000001341,
+      "end_s": 0.5614042000001973,
+      "status": 200,
+      "full_success": true,
+      "degraded": false,
+      "attempts": 1,
+      "worker": "payment1",
+      "probe": true,
+      "latency_ms": 8.787700000084442,
+      "path": "payments"
+    },
+    {
+      "request_id": "74cac4e9-6fab-44f5-af00-d8236dba0acf",
+      "start_s": 0.6431416000000354,
+      "end_s": 0.651905600000191,
+      "status": 200,
+      "full_success": true,
+      "degraded": false,
+      "attempts": 1,
+      "worker": "payment1",
+      "probe": true,
+      "latency_ms": 8.76460000017687,
+      "path": "payments"
+    },
+    {
+      "request_id": "713ad86d-c368-4cec-9590-c1c20ab92356",
+      "start_s": 0.73401849999982,
+      "end_s": 0.7430742999999893,
+      "status": 200,
+      "full_success": true,
+      "degraded": false,
+      "attempts": 1,
+      "worker": "payment1",
+      "probe": true,
+      "latency_ms": 9.056400000190479,
+      "path": "payments"
+    }
+  ],
+  "state_before": {
+    "consistent": true,
+    "balances": [
+      {
+        "id": "S001",
+        "initial_due": 100000,
+        "due": 99900,
+        "paid": 100,
+        "discrepancy": 0
+      },
+      {
+        "id": "S002",
+        "initial_due": 100000,
+        "due": 100000,
+        "paid": 0,
+        "discrepancy": 0
+      }
+    ],
+    "duplicate_keys": 0,
+    "payment_count": 1
+  },
+  "state_after": {
+    "consistent": false,
+    "balances": [
+      {
+        "id": "S001",
+        "initial_due": 100000,
+        "due": 99700,
+        "paid": 200,
+        "discrepancy": 100
+      },
+      {
+        "id": "S002",
+        "initial_due": 100000,
+        "due": 100000,
+        "paid": 0,
+        "discrepancy": 0
+      }
+    ],
+    "duplicate_keys": 0,
+    "payment_count": 2
+  },
+  "extra": {
+    "after_first_attempt": {
+      "consistent": false,
+      "balances": [
+        {
+          "id": "S001",
+          "initial_due": 100000,
+          "due": 99800,
+          "paid": 100,
+          "discrepancy": 100
+        },
+        {
+          "id": "S002",
+          "initial_due": 100000,
+          "due": 100000,
+          "paid": 0,
+          "discrepancy": 0
+        }
+      ],
+      "duplicate_keys": 0,
+      "payment_count": 1
+    }
+  }
+}

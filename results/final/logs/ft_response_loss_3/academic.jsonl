@@ -1,0 +1,1 @@
+{"timestamp": "2026-10-05T09:47:10.538348+00:00", "wall_time": 1791193630.538358, "service": "academic", "mode": "ft", "action": "request", "request_id": "89646ca7-f635-4560-9813-91fa5daaa5fa", "path": "/health", "status": 200, "latency_ms": 1.672}

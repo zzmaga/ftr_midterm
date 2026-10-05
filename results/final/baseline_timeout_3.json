@@ -1,0 +1,302 @@
+{
+  "summary": {
+    "mode": "baseline",
+    "scenario": "timeout",
+    "trial": 3,
+    "requests": 16,
+    "successful_requests": 11,
+    "failed_requests": 5,
+    "degraded_responses": 0,
+    "recovered_requests": 0,
+    "retried_requests": 0,
+    "retry_recovery_rate": null,
+    "request_availability": 0.6875,
+    "observation_s": 7.5104927000002135,
+    "uptime_s": 1.8768905000001723,
+    "downtime_s": 5.633602200000041,
+    "outage_episodes": 1,
+    "completed_recoveries": 1,
+    "mttf_s": 1.8768905000001723,
+    "mttr_s": 5.633602200000041,
+    "mtbf_s": 7.5104927000002135,
+    "time_availability": 0.24990244647999177,
+    "failure_rate_per_s": 0.5327961327525012,
+    "p95_latency_ms": 1015.5322999999044,
+    "detection_ms": 1007.3833465576172,
+    "service_recovery_ms": 6642.323900000065,
+    "component_restore_ms": 5517.7098999997725,
+    "consistent": true,
+    "duplicate_keys": 0,
+    "payment_count": 1,
+    "workers": "academic,payment1,student"
+  },
+  "events": [
+    {
+      "action": "fault_injected",
+      "time_s": 0.4200874000002841,
+      "wall_time": 1791193544.049983,
+      "scenario": "timeout"
+    },
+    {
+      "action": "component_restored",
+      "time_s": 5.937797300000057,
+      "wall_time": 1791193549.5676918
+    }
+  ],
+  "requests": [
+    {
+      "request_id": "29ee7aeb-1a55-40bb-8cb7-0a6fed6c63a3",
+      "start_s": 0.03023010000015347,
+      "end_s": 0.04270370000040202,
+      "status": 200,
+      "full_success": true,
+      "degraded": false,
+      "attempts": 1,
+      "worker": "academic",
+      "probe": true,
+      "latency_ms": 12.474499999825639,
+      "path": "transcript/S001"
+    },
+    {
+      "request_id": "ad60a8eb-4beb-4f06-acda-3c7ce22c1a28",
+      "start_s": 0.12845370000013645,
+      "end_s": 0.13701110000010885,
+      "status": 200,
+      "full_success": true,
+      "degraded": false,
+      "attempts": 1,
+      "worker": "academic",
+      "probe": true,
+      "latency_ms": 8.558099999845581,
+      "path": "transcript/S001"
+    },
+    {
+      "request_id": "13e4dac1-85be-4464-bd8c-8cdb71328082",
+      "start_s": 0.21872310000026118,
+      "end_s": 0.2265199000003122,
+      "status": 200,
+      "full_success": true,
+      "degraded": false,
+      "attempts": 1,
+      "worker": "academic",
+      "probe": true,
+      "latency_ms": 7.7974999999241845,
+      "path": "transcript/S001"
+    },
+    {
+      "request_id": "dc24c13c-c9bd-46ac-82a3-ddc77df2d3d9",
+      "start_s": 0.3175154000000475,
+      "end_s": 0.3262950000003002,
+      "status": 200,
+      "full_success": true,
+      "degraded": false,
+      "attempts": 1,
+      "worker": "academic",
+      "probe": true,
+      "latency_ms": 8.780399999977817,
+      "path": "transcript/S001"
+    },
+    {
+      "request_id": "e0e98b5c-849d-4c0e-9fb7-a217019b047b",
+      "start_s": 0.4245192000003044,
+      "end_s": 1.4288091000003078,
+      "status": 503,
+      "full_success": false,
+      "degraded": false,
+      "attempts": 1,
+      "worker": "",
+      "probe": true,
+      "latency_ms": 1004.2905999998766,
+      "path": "transcript/S001"
+    },
+    {
+      "request_id": "14b7bb43-585a-4f2b-aaf4-1d35d75ef4bb",
+      "start_s": 1.5200491000000511,
+      "end_s": 2.5323646000001645,
+      "status": 503,
+      "full_success": false,
+      "degraded": false,
+      "attempts": 1,
+      "worker": "",
+      "probe": true,
+      "latency_ms": 1012.3161000001346,
+      "path": "transcript/S001"
+    },
+    {
+      "request_id": "8015ba2b-ae7e-4507-bc5f-8d4dd3a01e49",
+      "start_s": 2.6155164000001605,
+      "end_s": 3.6224812000000384,
+      "status": 503,
+      "full_success": false,
+      "degraded": false,
+      "attempts": 1,
+      "worker": "",
+      "probe": true,
+      "latency_ms": 1006.9655000002058,
+      "path": "transcript/S001"
+    },
+    {
+      "request_id": "820a998d-45be-4445-a9c2-4959359d192a",
+      "start_s": 3.711574400000245,
+      "end_s": 4.719424600000366,
+      "status": 503,
+      "full_success": false,
+      "degraded": false,
+      "attempts": 1,
+      "worker": "",
+      "probe": true,
+      "latency_ms": 1007.850899999994,
+      "path": "transcript/S001"
+    },
+    {
+      "request_id": "1f1929ca-af7e-4473-be08-57118ef08056",
+      "start_s": 4.810304400000405,
+      "end_s": 5.82583620000014,
+      "status": 503,
+      "full_success": false,
+      "degraded": false,
+      "attempts": 1,
+      "worker": "",
+      "probe": true,
+      "latency_ms": 1015.5322999999044,
+      "path": "transcript/S001"
+    },
+    {
+      "request_id": "08a2432c-b770-4340-8d03-70ebc28b593a",
+      "start_s": 5.91300850000016,
+      "end_s": 5.924391300000025,
+      "status": 200,
+      "full_success": true,
+      "degraded": false,
+      "attempts": 1,
+      "worker": "student",
+      "probe": false,
+      "latency_ms": 11.383300000034069,
+      "path": "students"
+    },
+    {
+      "request_id": "5b6af2e1-5d4f-438a-b72c-370956a67164",
+      "start_s": 5.924408400000175,
+      "end_s": 5.934301800000412,
+      "status": 200,
+      "full_success": true,
+      "degraded": false,
+      "attempts": 1,
+      "worker": "payment1",
+      "probe": false,
+      "latency_ms": 9.894100000110484,
+      "path": "payments"
+    },
+    {
+      "request_id": "380cef0c-03fd-4e0b-a26d-79b8cd36fc0a",
+      "start_s": 7.0520807000002605,
+      "end_s": 7.062411300000349,
+      "status": 200,
+      "full_success": true,
+      "degraded": false,
+      "attempts": 1,
+      "worker": "academic",
+      "probe": true,
+      "latency_ms": 10.331500000120286,
+      "path": "transcript/S001"
+    },
+    {
+      "request_id": "53e251bf-009f-4c67-ac6c-62676d7285ad",
+      "start_s": 7.147970400000304,
+      "end_s": 7.157336600000235,
+      "status": 200,
+      "full_success": true,
+      "degraded": false,
+      "attempts": 1,
+      "worker": "academic",
+      "probe": true,
+      "latency_ms": 9.367000000111148,
+      "path": "transcript/S001"
+    },
+    {
+      "request_id": "14611c13-f8bf-4b09-976d-db5c0f3f9541",
+      "start_s": 7.246251100000336,
+      "end_s": 7.255568700000367,
+      "status": 200,
+      "full_success": true,
+      "degraded": false,
+      "attempts": 1,
+      "worker": "academic",
+      "probe": true,
+      "latency_ms": 9.318299999904411,
+      "path": "transcript/S001"
+    },
+    {
+      "request_id": "3d5bd134-6498-49b6-a183-906d44cdce4b",
+      "start_s": 7.342404400000305,
+      "end_s": 7.351350300000377,
+      "status": 200,
+      "full_success": true,
+      "degraded": false,
+      "attempts": 1,
+      "worker": "academic",
+      "probe": true,
+      "latency_ms": 8.946599999944738,
+      "path": "transcript/S001"
+    },
+    {
+      "request_id": "8fe7c072-deb9-4719-a35c-70ef86f5913c",
+      "start_s": 7.431567900000118,
+      "end_s": 7.441186900000048,
+      "status": 200,
+      "full_success": true,
+      "degraded": false,
+      "attempts": 1,
+      "worker": "academic",
+      "probe": true,
+      "latency_ms": 9.619599999950879,
+      "path": "transcript/S001"
+    }
+  ],
+  "state_before": {
+    "consistent": true,
+    "balances": [
+      {
+        "id": "S001",
+        "initial_due": 100000,
+        "due": 99900,
+        "paid": 100,
+        "discrepancy": 0
+      },
+      {
+        "id": "S002",
+        "initial_due": 100000,
+        "due": 100000,
+        "paid": 0,
+        "discrepancy": 0
+      }
+    ],
+    "duplicate_keys": 0,
+    "payment_count": 1
+  },
+  "state_after": {
+    "consistent": true,
+    "balances": [
+      {
+        "id": "S001",
+        "initial_due": 100000,
+        "due": 99900,
+        "paid": 100,
+        "discrepancy": 0
+      },
+      {
+        "id": "S002",
+        "initial_due": 100000,
+        "due": 100000,
+        "paid": 0,
+        "discrepancy": 0
+      }
+    ],
+    "duplicate_keys": 0,
+    "payment_count": 1
+  },
+  "extra": {
+    "student_status": 200,
+    "payment_status": 200
+  }
+}
