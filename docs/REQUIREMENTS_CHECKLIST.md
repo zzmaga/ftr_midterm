@@ -11,7 +11,7 @@ Source: MIDTERM FTR.docx supplied by the user. The earlier ChatGPT conversation 
 - [x] Collect detection/recovery times, request counts, system state and data consistency. JSON traces, summary CSV and real service logs are included.
 - [x] Calculate MTTF, MTBF, MTTR, availability, observed failure rate and recovered request counts. Report section 10 explains finite-window estimates, unavailable values and sampling limits.
 - [x] Architecture diagram and fault analysis including single points of failure and RAID/ECC concepts. Report sections 4-6 and `architecture.md`.
-- [x] Report with all fourteen prescribed sections and real references: `REPORT.pdf` and editable `REPORT.html`, 10 PDF pages visually checked. Personal fields are blank as requested.
+- [x] Report with all fourteen prescribed sections and real references: `REPORT.pdf` and editable `REPORT.html`, 10 PDF pages visually checked. Title page: Tastan Magzhan, CSE-2505M, instructor Azamat Serek; Student ID omitted as requested.
 - [x] Reproducible experiments, logs, comparison tables and meaningful tests: 17 passing tests; 54 cases independently recomputed and verified.
 - [x] Demonstration guide covering at least three failures; Russian defense preparation: `DEMO.md` and `DEFENSE.md`.
 - [x] Final requirement and evidence audit. Commit/push status is recorded in Git rather than self-referential documentation.

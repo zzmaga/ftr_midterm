@@ -98,8 +98,9 @@ def build(dataset, output):
     p("Midterm technical report | Fault Tolerance and Dependable Computing")
     p("Campus reliability lab | 5 October 2026")
     story.append(Spacer(1,35))
-    for label in ["Student name", "Student ID", "Group", "Instructor"]:
-        p(label+": __________________________________________")
+    p("Student name: Tastan Magzhan")
+    p("Group: CSE-2505M")
+    p("Instructor: Azamat Serek")
     story.append(Spacer(1,30))
     p("A compact, executable university platform compares an intentionally weak baseline with a fault-tolerant configuration. Three business services and one shared SQLite owner expose failures, recovery and transaction consistency through real HTTP experiments.")
     p("The submitted dataset contains 54 controlled runs: nine scenarios, two configurations and three trials. Measurements use local processes on one Windows computer. Physical node failure is modelled by stopping a group of processes; it is not a multi-host hardware test.")

@@ -121,7 +121,7 @@ Both Docker variants publish port 8100; stop one before starting the other. Bind
 - `app/`, `scripts/`, `tests/`, Docker files and pinned dependencies: implementation.
 - `docs/architecture.md`: diagram and deployment boundaries.
 - `docs/REPORT.html`: technical report with all 14 required sections; open in a browser and print if needed.
-- `docs/REPORT.pdf`: rendered and visually verified submission report, with blank personal details.
+- `docs/REPORT.pdf`: rendered and visually verified submission report for Tastan Magzhan, CSE-2505M.
 - `docs/DEMO.md`, `docs/DEFENSE.md`: a short demo and Russian defense notes.
 - `docs/REQUIREMENTS_CHECKLIST.md`: rubric audit and environment limitations.
 - `results/final/`: measured dataset and service logs for the submitted report.
