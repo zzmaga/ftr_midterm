@@ -57,6 +57,14 @@ Rebuild the PDF and editable HTML report:
 .\.venv\Scripts\python -m scripts.build_report --dataset results/final
 ```
 
+Russian companion report, preserving English technical terms:
+
+```powershell
+.\.venv\Scripts\python -m scripts.build_report_ru --dataset results/final
+```
+
+This creates `docs/REPORT_RU.pdf` and `docs/REPORT_RU.html` using the same measured data. The PDF embeds Arial for Cyrillic support; on Windows the builder reads the installed fonts. On another OS, pass `--font-dir` pointing to a directory containing `arial.ttf` and `arialbd.ttf`.
+
 `requirements-lock.txt` records the full tested application environment. Report dependencies are separate from the running services.
 
 The experiment runner starts isolated systems on ports **8200–8205**, kills/restarts only its own processes, and stops them on completion. Every run uses a fresh directory. It evaluates both modes and alternates their order across trials.
@@ -122,6 +130,7 @@ Both Docker variants publish port 8100; stop one before starting the other. Bind
 - `docs/architecture.md`: diagram and deployment boundaries.
 - `docs/REPORT.html`: technical report with all 14 required sections; open in a browser and print if needed.
 - `docs/REPORT.pdf`: rendered and visually verified submission report for Tastan Magzhan, CSE-2505M.
+- `docs/REPORT_RU.pdf`: Russian version with English technical terms; the same 14 sections, author details and numerical results. Editable text is available in `docs/REPORT_RU.html`.
 - `docs/DEMO.md`, `docs/DEFENSE.md`: a short demo and Russian defense notes.
 - `docs/REQUIREMENTS_CHECKLIST.md`: rubric audit and environment limitations.
 - `results/final/`: measured dataset and service logs for the submitted report.
