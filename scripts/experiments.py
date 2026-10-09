@@ -193,8 +193,12 @@ async def main_async(args):
                     w = csv.DictWriter(f, fieldnames=list(rows[0]))
                     w.writeheader()
                     w.writerows(rows)
+    from scripts.visualize_results import build
+    dashboard = build(output)
     (ROOT / "results" / "latest.txt").write_text(output.name, encoding="utf-8")
     print(f"Results: {output}")
+    print(f"Charts (open in browser): {dashboard}")
+    print("Live dashboard (if scripts.local is running): http://127.0.0.1:8100/results")
 
 
 if __name__ == "__main__":

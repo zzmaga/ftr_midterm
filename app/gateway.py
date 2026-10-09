@@ -7,6 +7,7 @@ from fastapi.responses import FileResponse, JSONResponse
 
 from app.common import MODE, make_app
 from app.database_models import PaymentInput
+from app.experiment_results import latest_results
 from app.resilience import DownstreamUnavailable, ResilientClient
 
 app = make_app("Campus reliability lab")
@@ -31,6 +32,21 @@ app.router.lifespan_context = lifespan
 @app.get("/")
 def index():
     return FileResponse(Path(__file__).parent / "static" / "index.html")
+
+
+@app.get("/results")
+def results_page():
+    return FileResponse(Path(__file__).parent / "static" / "results.html")
+
+
+@app.get("/api/experiments/latest")
+def results_data():
+    try:
+        return JSONResponse(latest_results(), headers={"Cache-Control": "no-store"})
+    except FileNotFoundError:
+        return JSONResponse({"detail": "Нет результатов. Сначала запустите scripts.experiments."}, 404)
+    except (ValueError, KeyError) as exc:
+        return JSONResponse({"detail": f"Не удалось прочитать результаты: {exc}"}, 422)
 
 
 @app.get("/api/status")

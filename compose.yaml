@@ -59,6 +59,7 @@ services:
       database: {condition: service_healthy}
   gateway:
     <<: *service
+    volumes: ['./results:/app/results:ro']
     environment:
       <<: *env
       INSTANCE: gateway

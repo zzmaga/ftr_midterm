@@ -79,6 +79,18 @@ The experiment runner starts isolated systems on ports **8200–8205**, kills/re
 
 `results/latest.txt` points to the latest successful experiment folder. Each case has raw request timings, injection/restoration events, before/after audits and metrics in JSON. `summary.csv` compares all cases. Actual service JSON logs are in that folder's `logs/`. Interactive service logs are under `.runtime/<mode>/logs/`.
 
+### Visual results for the defense
+
+Every completed experiment now also creates **`dashboard.html` inside its results folder** and prints its path. Double-click this file to show the charts in a browser; it works offline and does not require running the services. Blue means full responses, orange means degraded fallback responses, red means request errors. Data consistency is shown separately.
+
+For an existing run, without repeating experiments:
+
+```powershell
+.\.venv\Scripts\python -m scripts.visualize_results results/20261009T142103Z
+```
+
+Alternatively, start the university system and open **http://127.0.0.1:8100/results** (or use the link on its home page). Click **Обновить результаты** after another experiment completes. If the server was started before this feature was added, restart it once. The page reads `results/latest.txt`; it never uses example numbers. **Печать / PDF** opens the browser's print dialog.
+
 Availability is reported separately as successful full responses / all requests and as a sequential-probe time estimate. Degraded transcripts are counted separately, even though HTTP status is 200. Induced outage estimates are **not production MTTF predictions**. A blank metric means unobserved/not applicable, never an invented zero. See the report for the measurement conventions and sampling limitations.
 
 ## Inject a reversible fault into the interactive demo
